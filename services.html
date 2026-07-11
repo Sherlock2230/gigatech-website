@@ -182,8 +182,24 @@
               <label for="message">Anything else we should know? (optional)</label>
               <textarea id="message" name="message" rows="4" placeholder="e.g. area/location, current backup setup, what must stay on"></textarea>
             </div>
-            <button type="submit" class="btn" style="border:none; cursor:pointer; width:100%;">Request My Free Assessment</button>
+            <button type="button" id="waSubmit" class="btn" style="border:none; cursor:pointer; width:100%;">Send via WhatsApp</button>
+            <button type="submit" class="btn btn-ghost" style="cursor:pointer; width:100%; margin-top:10px;">Or Send by Email</button>
           </form>
+          <script>
+            document.getElementById('waSubmit').addEventListener('click', function () {
+              var name = document.getElementById('name').value.trim();
+              var phone = document.getElementById('phone').value.trim();
+              var type = document.getElementById('type').value;
+              var msg = document.getElementById('message').value.trim();
+              if (!name) { document.getElementById('name').reportValidity(); return; }
+              var text = 'Hi Giga Tech, I\'d like a free solar assessment.%0A%0A'
+                + '*Name:* ' + encodeURIComponent(name) + '%0A'
+                + '*Phone:* ' + encodeURIComponent(phone) + '%0A'
+                + '*Property:* ' + encodeURIComponent(type)
+                + (msg ? '%0A*Details:* ' + encodeURIComponent(msg) : '');
+              window.open('https://wa.me/263786672352?text=' + text, '_blank');
+            });
+          </script>
         </div>
       </div>
     </div>
