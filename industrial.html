@@ -15,6 +15,263 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+/* ============================================================
+   SEGMENT PAGES (business.html / industrial.html)
+   Dark, engineering-document feel. One signature element:
+   a vertical "supply line" (styled like a single-line diagram)
+   that runs the length of the page and terminates at contact.
+   All rules scoped under body.seg-page — no effect elsewhere.
+   ============================================================ */
+
+.seg-page {
+  background:
+    linear-gradient(rgba(250, 250, 248, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(250, 250, 248, 0.025) 1px, transparent 1px),
+    var(--ink);
+  background-size: 36px 36px, 36px 36px, auto;
+  color: var(--paper);
+}
+.seg-page .lede { color: #A9A9A6; }
+
+/* Dark header variant */
+.seg-page .site-header {
+  background: rgba(23, 24, 26, 0.92);
+  border-bottom: 1px solid #2C2D30;
+}
+.seg-page .nav a { color: var(--paper); }
+.seg-page .nav a:hover { color: var(--red); }
+.seg-page .nav a.btn { color: var(--white); }
+.seg-page .nav-toggle span { background: var(--paper); }
+@media (max-width: 900px) {
+  .seg-page .nav { background: var(--ink); border-bottom: 1px solid #2C2D30; }
+}
+
+/* Hero */
+.seg-hero { padding: 90px 0 70px; }
+.seg-hero h1 { max-width: 11em; }
+.seg-hero .lede { margin: 26px 0 0; max-width: 36em; }
+.seg-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--red);
+  display: block;
+  margin-bottom: 22px;
+}
+.seg-kicker span { color: #6E6E6B; }
+
+/* Readout strip — mono status bar, like an inverter display */
+.readout {
+  margin-top: 44px;
+  border: 1px solid #2C2D30;
+  border-left: 3px solid var(--red);
+  background: rgba(31, 32, 35, 0.85);
+  display: flex;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+.readout div {
+  padding: 14px 22px;
+  border-right: 1px solid #2C2D30;
+  flex: 1 1 auto;
+}
+.readout div:last-child { border-right: none; }
+.readout .k {
+  display: block;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6E6E6B;
+  margin-bottom: 3px;
+}
+.readout .v { color: var(--paper); }
+.readout .v.alert { color: var(--red); }
+
+/* The supply line */
+.flowline {
+  position: relative;
+  padding: 30px 0 0;
+}
+.flowline::before {
+  content: "";
+  position: absolute;
+  left: 27px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #2C2D30;
+}
+.stage {
+  position: relative;
+  padding: 54px 0 54px 92px;
+}
+.stage + .stage { border-top: 1px dashed #26272A; }
+
+/* Node: SLD-style breaker symbol on the line */
+.stage-node {
+  position: absolute;
+  left: 8px;
+  top: 58px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #3A3A3D;
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #6E6E6B;
+  z-index: 1;
+}
+.stage.on .stage-node {
+  border-color: var(--red);
+  color: var(--red);
+  box-shadow: 0 0 0 4px rgba(216, 35, 42, 0.12);
+}
+.stage-tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  display: block;
+  margin-bottom: 14px;
+}
+.stage-tag span { color: #6E6E6B; }
+.stage h2 { font-size: clamp(1.6rem, 3.2vw, 2.3rem); margin-bottom: 16px; max-width: 16em; }
+.stage > p { color: #A9A9A6; max-width: 40em; margin-bottom: 14px; }
+.stage > p b, .stage > p strong { color: var(--paper); font-weight: 600; }
+
+/* Spec rows — key/value readouts inside a stage */
+.spec-rows {
+  margin-top: 26px;
+  border: 1px solid #2C2D30;
+  background: rgba(31, 32, 35, 0.85);
+  max-width: 560px;
+}
+.spec-rows div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 18px;
+  border-bottom: 1px solid #26272A;
+  font-size: 0.92rem;
+}
+.spec-rows div:last-child { border-bottom: none; }
+.spec-rows .k {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6E6E6B;
+  padding-top: 3px;
+}
+.spec-rows .v { color: var(--paper); text-align: right; }
+
+/* Deliverables / checklist inside a stage */
+.stage-list {
+  margin-top: 22px;
+  max-width: 560px;
+}
+.stage-list li {
+  padding: 10px 0 10px 30px;
+  border-bottom: 1px dashed #26272A;
+  color: #C9C9C6;
+  font-size: 0.95rem;
+  position: relative;
+}
+.stage-list li:last-child { border-bottom: none; }
+.stage-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  width: 14px;
+  height: 14px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23D8232A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') no-repeat center / contain;
+}
+
+/* Terminus — the line ends at contact */
+.terminus {
+  position: relative;
+  padding: 70px 0 90px 92px;
+}
+.terminus::before {
+  content: "";
+  position: absolute;
+  left: 27px;
+  top: 0;
+  height: 78px;
+  width: 2px;
+  background: #2C2D30;
+}
+.terminus-node {
+  position: absolute;
+  left: 15px;
+  top: 66px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--red);
+  border: 4px solid var(--ink);
+  box-shadow: 0 0 0 2px var(--red), 0 0 26px rgba(216, 35, 42, 0.5);
+}
+.terminus-panel {
+  background: #1F2023;
+  border: 1px solid #2C2D30;
+  border-top: 3px solid var(--red);
+  padding: 44px 40px;
+  max-width: 760px;
+}
+.terminus-panel h2 { margin-bottom: 14px; max-width: 15em; }
+.terminus-panel > p { color: #A9A9A6; max-width: 36em; margin-bottom: 28px; }
+.contact-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 34px; }
+.contact-ctas .btn-ghost { border-color: var(--paper); color: var(--paper); }
+.contact-ctas .btn-ghost:hover { background: var(--paper); color: var(--ink); }
+.terminus-contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 30px;
+  font-size: 0.95rem;
+  border-top: 1px solid #2C2D30;
+  padding-top: 24px;
+}
+.terminus-contacts .k {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6E6E6B;
+  display: block;
+  margin-bottom: 2px;
+}
+.terminus-contacts a { color: var(--paper); font-weight: 600; }
+.terminus-contacts a:hover { color: var(--red); }
+.terminus-contacts > div { padding: 10px 0; }
+
+/* Footer sits flush on dark pages */
+.seg-page .site-footer { margin-top: 0; border-top: 1px solid #2C2D30; }
+
+@media (max-width: 700px) {
+  .seg-hero { padding: 60px 0 50px; }
+  .flowline::before { left: 15px; }
+  .stage { padding: 44px 0 44px 52px; }
+  .stage-node { left: -3px; top: 48px; width: 36px; height: 36px; }
+  .terminus { padding: 54px 0 70px 52px; }
+  .terminus::before { left: 15px; height: 64px; }
+  .terminus-node { left: 3px; top: 52px; }
+  .terminus-panel { padding: 32px 24px; }
+  .terminus-contacts { grid-template-columns: 1fr; }
+  .readout { flex-direction: column; }
+  .readout div { border-right: none; border-bottom: 1px solid #2C2D30; }
+  .readout div:last-child { border-bottom: none; }
+}
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
