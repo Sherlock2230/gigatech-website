@@ -31,7 +31,7 @@
   }
   </script>
 </head>
-<body>
+<body class="seg-page">
 
   <header class="site-header">
     <div class="wrap">
@@ -42,7 +42,7 @@
         <a href="how-we-work.html">How We Work</a>
         <a href="projects.html">Projects</a>
         <a href="blog/index.html">Blog</a>
-        <a href="services.html#contact" class="btn">Get a Free Assessment</a>
+        <a href="#contact" class="btn">Talk to Us</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -51,197 +51,114 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero" style="padding: 70px 0 60px;">
-    <div class="wrap hero-grid">
+  <section class="seg-hero">
+    <div class="wrap">
       <div class="reveal">
-        <span class="eyebrow">Institutions &amp; industry</span>
-        <h1>Serious loads need<br>serious <span class="accent">engineering.</span></h1>
-        <p class="lede">Farms, schools, mines, clinics and factories don't run on guesswork. We design and build large solar systems — 60kVA and beyond — with full load analysis, professional simulation and documentation you can put in front of a board or a bank.</p>
-        <div class="hero-ctas">
-          <a href="https://wa.me/263786672352?text=Hi%20Giga%20Tech%2C%20I%27d%20like%20to%20discuss%20a%20large%20solar%20system%20for%20our%20operation." target="_blank" rel="noopener" class="btn">Discuss Your Project</a>
-          <a href="projects.html" class="btn btn-ghost">See Our Installations</a>
-        </div>
-        <div class="spec-chips">
-          <span class="chip"><b>Systems</b> 60kVA+</span>
-          <span class="chip"><b>Three-phase</b> · industrial loads</span>
-          <span class="chip"><b>Full EPC</b> · one contractor</span>
-        </div>
-      </div>
-      <div class="hero-visual reveal" aria-hidden="true">
-        <!-- Panel array → factory diagram -->
-        <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="30" y="35" width="90" height="52" rx="4" stroke="#FAFAF8" stroke-width="2.5"/>
-          <rect x="130" y="35" width="90" height="52" rx="4" stroke="#FAFAF8" stroke-width="2.5"/>
-          <rect x="80" y="97" width="90" height="52" rx="4" stroke="#FAFAF8" stroke-width="2.5"/>
-          <line x1="75" y1="35" x2="75" y2="87" stroke="#FAFAF8" stroke-width="1.5"/>
-          <line x1="175" y1="35" x2="175" y2="87" stroke="#FAFAF8" stroke-width="1.5"/>
-          <line x1="125" y1="97" x2="125" y2="149" stroke="#FAFAF8" stroke-width="1.5"/>
-          <line x1="30" y1="61" x2="120" y2="61" stroke="#FAFAF8" stroke-width="1.5"/>
-          <line x1="130" y1="61" x2="220" y2="61" stroke="#FAFAF8" stroke-width="1.5"/>
-          <line x1="80" y1="123" x2="170" y2="123" stroke="#FAFAF8" stroke-width="1.5"/>
-          <path d="M175 150 C 210 175, 220 190, 240 205" stroke="#D8232A" stroke-width="2.5" stroke-dasharray="6 6" class="flow"/>
-          <path d="M235 285 V 225 l 35 -20 v 20 l 35 -20 v 20 l 35 -20 V 285 Z" stroke="#FAFAF8" stroke-width="3" stroke-linejoin="round"/>
-          <rect x="252" y="255" width="20" height="30" stroke="#FAFAF8" stroke-width="2.5"/>
-          <path d="M300 240 l -7 12 h 9 l -7 12" stroke="#D8232A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          <line x1="318" y1="248" x2="318" y2="268" stroke="#FAFAF8" stroke-width="2.5"/>
-          <line x1="308" y1="258" x2="328" y2="258" stroke="#FAFAF8" stroke-width="2.5"/>
-        </svg>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHO IT'S FOR -->
-  <section class="section section-dark">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Who we build for</span>
-        <h2>Big operations. Bigger consequences when power fails.</h2>
-        <p class="lede">When an outage stops irrigation, closes classrooms or halts production, the losses run into thousands per day. These systems are engineered to carry real industrial and institutional loads.</p>
-      </div>
-      <div class="card-grid">
-        <div class="card reveal">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8"/><path d="m4.93 10.93 1.41 1.41"/><path d="M2 18h2"/><path d="M20 18h2"/><path d="m19.07 10.93-1.41 1.41"/><path d="M22 22H2"/><path d="M16 6 12 2 8 6"/><path d="M16 18a4 4 0 0 0-8 0"/></svg>
-          </div>
-          <h3>Farms &amp; agro-processing</h3>
-          <p>Boreholes, irrigation pumps, cold chain, milking parlours, incubators and grading sheds. Solar matches farming perfectly — your heaviest pumping loads run exactly when the sun is strongest.</p>
-        </div>
-        <div class="card reveal">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-          </div>
-          <h3>Schools &amp; clinics</h3>
-          <p>Boarding schools, colleges and health facilities can't negotiate with load shedding. We keep classrooms, labs, kitchens, hostels, theatres and vaccine fridges powered — day and night.</p>
-        </div>
-        <div class="card reveal">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20V10l5-6 3 4 3-4 5 6v10"/><path d="M10 20v-4h4v4"/></svg>
-          </div>
-          <h3>Mines &amp; factories</h3>
-          <p>Processing plants, workshops, compressors, conveyors and site facilities. We design three-phase systems around motor starting currents and real duty cycles — sized for how industry actually draws power.</p>
+        <span class="seg-kicker">Institutions &amp; industry <span>// farms · schools · mines · factories</span></span>
+        <h1>Serious loads need engineered supply.</h1>
+        <p class="lede">At 60kVA and beyond, solar stops being a purchase and becomes a project — one that has to survive a board meeting, a bursar's review or a bank's scrutiny. This page follows how that project actually runs, from the problem on your site to the day it's commissioned.</p>
+        <div class="readout reveal">
+          <div><span class="k">System class</span><span class="v">60kVA+</span></div>
+          <div><span class="k">Supply</span><span class="v">THREE-PHASE</span></div>
+          <div><span class="k">Delivery</span><span class="v">FULL EPC</span></div>
+          <div><span class="k">Design life</span><span class="v">20+ YEARS</span></div>
+          <div><span class="k">Design</span><span class="v">BY ENGINEERS</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ENGINEERING CREDIBILITY -->
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Why Giga Tech at this scale</span>
-        <h2>At 60kVA+, the design is the product.</h2>
-        <p class="lede">Anyone can bolt panels to a roof. Large systems succeed or fail on the engineering behind them — and that's exactly where we're strongest.</p>
-      </div>
-      <div class="card-grid">
-        <div class="card reveal">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-          </div>
-          <h3>Simulated before it's built</h3>
-          <p>Every large system is modelled in professional design software against your real consumption data — so projected output, autonomy and payback are calculated, not promised.</p>
-        </div>
-        <div class="card reveal">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-          </div>
-          <h3>Documentation that stands up</h3>
-          <p>Single-line diagrams, protection coordination and a full handover pack — the paperwork boards, auditors and financiers expect from a serious installation.</p>
-        </div>
-        <div class="card reveal">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3>One accountable contractor</h3>
-          <p>Full EPC delivery — engineering, procurement and construction under one contract. One team, one point of responsibility, from first site visit to final commissioning and beyond.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- THE FLOW -->
+  <div class="wrap">
+    <div class="flowline">
 
-  <!-- STATS -->
-  <section class="section section-dark">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">At a glance</span>
-        <h2>Built by engineers. Proven on site.</h2>
-      </div>
-      <div class="stats">
-        <div class="stat reveal"><div class="num">60kVA+</div><div class="label">Commercial system class we design and install</div></div>
-        <div class="stat reveal"><div class="num">100%</div><div class="label">Systems designed by qualified engineers</div></div>
-        <div class="stat reveal"><div class="num">3-phase</div><div class="label">Industrial loads, motors and pumps handled</div></div>
-        <div class="stat reveal"><div class="num">20+ yrs</div><div class="label">Design life of a properly built system</div></div>
-      </div>
-    </div>
-  </section>
+      <section class="stage reveal">
+        <div class="stage-node">01</div>
+        <span class="stage-tag">The operation <span>// where it starts</span></span>
+        <h2>When the grid fails, the whole operation feels it.</h2>
+        <p>Irrigation stops mid-cycle and the crop doesn't wait. Hostels go dark at prep time. The mill, the compressor, the processing line — idle, with staff standing by. The diesel line item grows every quarter, and <b>nobody controls when it happens or how long it lasts.</b></p>
+        <div class="spec-rows">
+          <div><span class="k">Farms</span><span class="v">Boreholes, irrigation, cold chain, dairy</span></div>
+          <div><span class="k">Schools &amp; clinics</span><span class="v">Hostels, kitchens, labs, theatres, vaccine fridges</span></div>
+          <div><span class="k">Mines &amp; factories</span><span class="v">Compressors, conveyors, workshops, plant</span></div>
+        </div>
+      </section>
 
-  <!-- HOW A PROJECT RUNS -->
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">How a project runs</span>
-        <h2>A process built for institutions, not impulse buys.</h2>
-        <p class="lede">Large systems are decided in boardrooms and bursar's offices. Our process gives decision-makers the numbers and documents they need at every step.</p>
-      </div>
-      <div class="process reveal">
-        <div class="step">
-          <div class="step-marker">1</div>
-          <div>
-            <span class="step-tag">Feasibility</span>
-            <h3>Site audit &amp; energy analysis</h3>
-            <p>We audit your site, analyse your ZESA bills and metering data, and map your real load profile — including seasonal peaks and critical equipment.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-marker">2</div>
-          <div>
-            <span class="step-tag">Proposal</span>
-            <h3>Engineered design &amp; investment case</h3>
-            <p>You receive a full technical proposal: system design, simulated performance, single-line diagrams, costing and payback projection — a document your board or financiers can act on.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-marker">3</div>
-          <div>
-            <span class="step-tag">Delivery</span>
-            <h3>Phased installation &amp; commissioning</h3>
-            <p>We procure proven equipment, build in phases that fit your operations and budget, then test, commission and hand over with full documentation and training.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-marker">4</div>
-          <div>
-            <span class="step-tag">Support</span>
-            <h3>Maintenance &amp; monitoring</h3>
-            <p>Scheduled maintenance and performance monitoring keep the system delivering what the design promised — for decades, not months.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <section class="stage reveal">
+        <div class="stage-node">02</div>
+        <span class="stage-tag">The meeting <span>// the numbers surface</span></span>
+        <h2>Someone finally asks what power really costs.</h2>
+        <p>In the boardroom or the bursar's office, the diesel invoices, the downtime and the spoiled output get added up — and the total is uncomfortable. The question changes from <b>"can we afford solar?"</b> to <b>"can we afford another year of this?"</b></p>
+        <p>A decision this size can't be made from a flyer. It needs numbers that stand up to scrutiny. That's the point of the next stage.</p>
+      </section>
 
-  <!-- WARRANTY STRIP -->
-  <section class="section" style="padding-top: 0; padding-bottom: 0;">
-    <div class="wrap">
-      <div class="warranty-strip reveal">
-        <div class="ws-text">
-          <h3>Backed by a real warranty.</h3>
-          <p>1 year free workmanship · 1 year inverter · 5 years batteries · 20 years panels.</p>
-        </div>
-        <a href="warranty.html" class="btn btn-ghost">See Our Warranty</a>
-      </div>
-    </div>
-  </section>
+      <section class="stage on reveal">
+        <div class="stage-node">03</div>
+        <span class="stage-tag">The study <span>// measured, not guessed</span></span>
+        <h2>We audit the site and map the real load.</h2>
+        <p>Our engineers visit your operation, analyse your ZESA bills and metering data, and build your actual load profile — seasonal peaks, motor starting currents, critical versus deferrable loads. This is the foundation everything else is engineered on.</p>
+        <ul class="stage-list">
+          <li>Full site and electrical infrastructure audit</li>
+          <li>ZESA bill and consumption analysis</li>
+          <li>Load profiling — including seasonal and process peaks</li>
+          <li>Critical-load identification with your team</li>
+        </ul>
+      </section>
 
-  <!-- CTA -->
-  <section class="section">
-    <div class="wrap">
-      <div class="cta-band reveal">
-        <h2>Start with a professional feasibility study.</h2>
-        <a href="https://wa.me/263786672352?text=Hi%20Giga%20Tech%2C%20I%27d%20like%20to%20discuss%20a%20large%20solar%20system%20for%20our%20operation." target="_blank" rel="noopener" class="btn">Discuss Your Project</a>
-      </div>
-      <p class="price-note">Every large system is quoted from an engineered design — no off-the-shelf pricing. Prefer email? <a href="services.html#contact" style="color:var(--red); font-weight:600;">Use our contact form</a>.</p>
+      <section class="stage on reveal">
+        <div class="stage-node">04</div>
+        <span class="stage-tag">The proposal <span>// a document a board can approve</span></span>
+        <h2>An engineered design with an investment case.</h2>
+        <p>You receive a complete technical proposal: the system design simulated in professional software against your own consumption data, single-line diagrams, protection coordination, itemised costing and a payback projection. <b>Paperwork that boards, auditors and financiers can act on</b> — not a brochure.</p>
+        <div class="spec-rows">
+          <div><span class="k">Performance</span><span class="v">Simulated output &amp; autonomy, from your data</span></div>
+          <div><span class="k">Drawings</span><span class="v">Single-line diagrams &amp; protection design</span></div>
+          <div><span class="k">Commercials</span><span class="v">Itemised costing, fixed price</span></div>
+          <div><span class="k">Investment case</span><span class="v">Payback &amp; savings projection</span></div>
+        </div>
+      </section>
+
+      <section class="stage on reveal">
+        <div class="stage-node">05</div>
+        <span class="stage-tag">The delivery <span>// one accountable contractor</span></span>
+        <h2>Procured, built and commissioned — in phases that fit you.</h2>
+        <p>Full EPC delivery under one contract: we procure proven equipment at trade terms, build in phases that respect your operations and budget, then test, commission and hand over with complete documentation and training for your staff. Scheduled maintenance and monitoring keep the system delivering what the design promised.</p>
+        <ul class="stage-list">
+          <li>Proven equipment — panels, inverters, storage with real warranties</li>
+          <li>Phased installation planned around your operations</li>
+          <li>Testing, commissioning and documented handover</li>
+          <li>Maintenance and performance monitoring after switch-on</li>
+        </ul>
+      </section>
+
+      <section class="stage on reveal">
+        <div class="stage-node">✓</div>
+        <span class="stage-tag">The operation, powered <span>// where it ends</span></span>
+        <h2>The same site. A supply you own.</h2>
+        <p>Irrigation runs on the sun at full pumping hours. Hostels and wards stay lit through the night schedule. The plant runs to your programme, not ZESA's. The diesel line item shrinks to a contingency — <b>and the asset on your roof keeps paying for itself for twenty years.</b></p>
+      </section>
+
+      <!-- TERMINUS / CONTACT -->
+      <section class="terminus reveal" id="contact">
+        <div class="terminus-node" aria-hidden="true"></div>
+        <div class="terminus-panel">
+          <h2>Start with the study. Put real numbers on the table.</h2>
+          <p>One message opens the conversation with our engineering team. If you have them, 12 months of ZESA bills and a site plan make the first assessment sharper — but we can start from wherever you are.</p>
+          <div class="contact-ctas">
+            <a href="https://wa.me/263786672352?text=Hi%20Giga%20Tech%2C%20I%27d%20like%20to%20discuss%20a%20large%20solar%20system%20for%20our%20operation." target="_blank" rel="noopener" class="btn">Discuss Your Project on WhatsApp</a>
+            <a href="services.html#contact" class="btn btn-ghost">Use the Contact Form</a>
+          </div>
+          <div class="terminus-contacts">
+            <div><span class="k">Call / WhatsApp — Tinofaranashe</span><a href="tel:+263786672352">+263 78 667 2352</a></div>
+            <div><span class="k">Call / WhatsApp — Takura</span><a href="tel:+263786668196">+263 78 666 8196</a></div>
+            <div><span class="k">Email</span><a href="mailto:tino@gigatechzw.com">tino@gigatechzw.com</a></div>
+            <div><span class="k">Based in</span>Harare, Zimbabwe — we travel to site</div>
+          </div>
+        </div>
+      </section>
+
     </div>
-  </section>
+  </div>
 
   <footer class="site-footer">
     <div class="wrap">

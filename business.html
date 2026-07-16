@@ -32,7 +32,7 @@
   }
   </script>
 </head>
-<body>
+<body class="seg-page">
 
   <header class="site-header">
     <div class="wrap">
@@ -43,7 +43,7 @@
         <a href="how-we-work.html">How We Work</a>
         <a href="projects.html">Projects</a>
         <a href="blog/index.html">Blog</a>
-        <a href="services.html#contact" class="btn">Get a Free Assessment</a>
+        <a href="#contact" class="btn">Talk to Us</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -52,172 +52,110 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero" style="padding: 70px 0 60px;">
-    <div class="wrap hero-grid">
+  <section class="seg-hero">
+    <div class="wrap">
       <div class="reveal">
-        <span class="eyebrow">Solar for businesses</span>
-        <h1>Load shedding closes shops.<br><span class="accent">Not yours.</span></h1>
-        <p class="lede">Every hour without power costs you sales, stock and customers. We design and install solar systems that keep your cold rooms cold, your tills open and your machines running — through any outage.</p>
-        <div class="hero-ctas">
-          <a href="https://wa.me/263786672352?text=Hi%20Giga%20Tech%2C%20I%27d%20like%20a%20free%20solar%20assessment%20for%20my%20business." target="_blank" rel="noopener" class="btn">Get a Free Business Assessment</a>
-          <a href="projects.html" class="btn btn-ghost">See Our Installations</a>
-        </div>
-        <div class="spec-chips">
-          <span class="chip"><b>Typical range</b> 5–60kVA</span>
-          <span class="chip"><b>Single &amp; three-phase</b></span>
-          <span class="chip"><b>Fixed quote</b> · no surprises</span>
-        </div>
-      </div>
-      <div class="hero-visual reveal" aria-hidden="true">
-        <!-- Panel → store with cold room diagram -->
-        <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="40" y="40" width="130" height="75" rx="6" stroke="#FAFAF8" stroke-width="3"/>
-          <line x1="40" y1="65" x2="170" y2="65" stroke="#FAFAF8" stroke-width="2"/>
-          <line x1="40" y1="90" x2="170" y2="90" stroke="#FAFAF8" stroke-width="2"/>
-          <line x1="83" y1="40" x2="83" y2="115" stroke="#FAFAF8" stroke-width="2"/>
-          <line x1="126" y1="40" x2="126" y2="115" stroke="#FAFAF8" stroke-width="2"/>
-          <path d="M170 80 C 220 85, 230 130, 250 150" stroke="#D8232A" stroke-width="2.5" stroke-dasharray="6 6" class="flow"/>
-          <rect x="200" y="160" width="160" height="100" rx="6" stroke="#FAFAF8" stroke-width="3"/>
-          <line x1="200" y1="190" x2="360" y2="190" stroke="#FAFAF8" stroke-width="2.5"/>
-          <rect x="218" y="205" width="40" height="55" stroke="#FAFAF8" stroke-width="2.5"/>
-          <path d="M228 225 h20 M228 238 h20" stroke="#D8232A" stroke-width="2.5" stroke-linecap="round"/>
-          <rect x="285" y="205" width="55" height="38" rx="3" stroke="#FAFAF8" stroke-width="2.5"/>
-          <path d="M300 216 l -6 10 h 8 l -6 10" stroke="#D8232A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <text x="206" y="182" fill="#D8232A" font-family="monospace" font-size="13" letter-spacing="2">OPEN 24/7</text>
-        </svg>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHO IT'S FOR -->
-  <section class="section section-dark">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Built for your business</span>
-        <h2>If power cuts hit your bottom line, this is for you.</h2>
-        <p class="lede">We size every system around what your business actually runs — refrigeration, machinery, lighting, tills, security — so you pay for what you need and nothing more.</p>
-      </div>
-      <div class="card-grid">
-        <div class="card reveal">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M12 2v20"/><path d="m4.9 4.9 14.2 14.2"/><path d="m19.1 4.9-14.2 14.2"/></svg>
-          </div>
-          <h3>Cold rooms &amp; butcheries</h3>
-          <p>Refrigeration can't take a break. We build systems that carry compressors through outages day and night — so meat, dairy and produce never spoil and stock loss stops being part of your budget.</p>
-        </div>
-        <div class="card reveal">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z"/><path d="M6 18h12"/><path d="M6 14h12"/><rect x="6" y="10" width="12" height="12"/></svg>
-          </div>
-          <h3>Warehouses &amp; wholesalers</h3>
-          <p>Lighting, forklifts charging, security systems, offices and dispatch — all running on the sun during the day and stored power at night. Your operation keeps moving while the grid doesn't.</p>
-        </div>
-        <div class="card reveal">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-          </div>
-          <h3>Shops, restaurants &amp; offices</h3>
-          <p>Supermarkets, pharmacies, bakeries, salons, surgeries and offices — anywhere the doors must stay open. Tills, fridges, ovens, Wi-Fi and lights stay on while your competitors sit in the dark.</p>
+        <span class="seg-kicker">Business systems <span>// cold rooms · butcheries · warehouses · shops</span></span>
+        <h1>We know how your day goes when the grid drops.</h1>
+        <p class="lede">This page follows it — hour by hour — from the moment the power cuts to the moment it stops being your problem. If any of it sounds familiar, the last stop on this line is a conversation with our engineers.</p>
+        <div class="readout reveal">
+          <div><span class="k">Grid</span><span class="v alert">DOWN</span></div>
+          <div><span class="k">Generator</span><span class="v">RUNNING</span></div>
+          <div><span class="k">Fuel cost</span><span class="v alert">RISING</span></div>
+          <div><span class="k">Cold room</span><span class="v alert">AT RISK</span></div>
+          <div><span class="k">Fix</span><span class="v">READ ON ↓</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- THE BUSINESS CASE -->
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">The numbers</span>
-        <h2>Solar isn't a cost. It's a cost you finally control.</h2>
-        <p class="lede">A generator bills you every single day it runs. A solar system is a one-time project with a payback you can calculate before you sign anything — and we show you that calculation up front.</p>
-      </div>
-      <div class="card-grid">
-        <div class="card reveal">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <h3>Cut fuel out of the budget</h3>
-          <p>Diesel and petrol costs never stop climbing. Most business systems we install replace the bulk of generator running hours from day one.</p>
-        </div>
-        <div class="card reveal">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-          </div>
-          <h3>A payback you can see</h3>
-          <p>Before you commit, we analyse your ZESA bills and usage, then give you a realistic payback projection — engineered numbers, not sales talk.</p>
-        </div>
-        <div class="card reveal">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>Stock &amp; reputation protected</h3>
-          <p>No more spoiled stock, no more "sorry, we're closed" during outages. Your customers learn one thing about you: you're always open.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- THE FLOW -->
+  <div class="wrap">
+    <div class="flowline">
 
-  <!-- HOW IT WORKS -->
-  <section class="section section-dark">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">How it works</span>
-        <h2>From site visit to switch-on. One team.</h2>
-        <p class="lede">Business systems are engineered, not guessed. Here's how we get yours right the first time.</p>
-      </div>
-      <div class="process reveal">
-        <div class="step">
-          <div class="step-marker">1</div>
-          <div>
-            <span class="step-tag">Assess</span>
-            <h3>Free site visit &amp; load analysis</h3>
-            <p>We visit your premises, measure what your business actually draws — compressors, motors, lighting, equipment — and review your ZESA bills.</p>
-          </div>
+      <section class="stage reveal">
+        <div class="stage-node">01</div>
+        <span class="stage-tag">04:50 <span>// the grid drops</span></span>
+        <h2>Load shedding starts before you do.</h2>
+        <p>The power is gone before the first customer arrives. Someone pulls the generator out, checks the fuel, and gets it coughing — and from that moment, <b>every hour of trading is billed in litres.</b></p>
+        <div class="spec-rows">
+          <div><span class="k">Now on fuel</span><span class="v">Cold room compressor</span></div>
+          <div><span class="k">Now on fuel</span><span class="v">Display fridges &amp; freezers</span></div>
+          <div><span class="k">Now on fuel</span><span class="v">Lights, tills &amp; Wi-Fi</span></div>
+          <div><span class="k">Now on fuel</span><span class="v">Security &amp; cameras</span></div>
         </div>
-        <div class="step">
-          <div class="step-marker">2</div>
-          <div>
-            <span class="step-tag">Design</span>
-            <h3>Engineered design &amp; fixed quote</h3>
-            <p>Our engineers size the system properly using professional simulation software, then hand you a clear proposal with a fixed price and payback estimate.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-marker">3</div>
-          <div>
-            <span class="step-tag">Build</span>
-            <h3>Installation with minimal disruption</h3>
-            <p>We install around your trading hours where possible, test every circuit, and hand over a documented, warranty-backed system.</p>
-          </div>
-        </div>
-      </div>
-      <p style="text-align:center; margin-top: 30px;"><a href="how-we-work.html" class="btn btn-ghost" style="border-color:#FAFAF8; color:#FAFAF8;">See the full process</a></p>
-    </div>
-  </section>
+      </section>
 
-  <!-- WARRANTY STRIP -->
-  <section class="section" style="padding-bottom: 0;">
-    <div class="wrap">
-      <div class="warranty-strip reveal">
-        <div class="ws-text">
-          <h3>Backed by a real warranty.</h3>
-          <p>1 year free workmanship · 1 year inverter · 5 years batteries · 20 years panels.</p>
-        </div>
-        <a href="warranty.html" class="btn btn-ghost">See Our Warranty</a>
-      </div>
-    </div>
-  </section>
+      <section class="stage reveal">
+        <div class="stage-node">02</div>
+        <span class="stage-tag">11:30 <span>// trading on borrowed power</span></span>
+        <h2>The shop is open. The meter is running.</h2>
+        <p>Mid-morning, someone leaves the floor to queue for fuel. The generator strains every time the compressor kicks in. You're serving customers — but a share of every sale is already spoken for by diesel, oil and the next service.</p>
+        <p><b>A generator solves this afternoon and bills you forever.</b> That's the trap most businesses are stuck in.</p>
+      </section>
 
-  <!-- CTA -->
-  <section class="section">
-    <div class="wrap">
-      <div class="cta-band reveal">
-        <h2>Get a quote built on your actual usage.</h2>
-        <a href="https://wa.me/263786672352?text=Hi%20Giga%20Tech%2C%20I%27d%20like%20a%20free%20solar%20assessment%20for%20my%20business." target="_blank" rel="noopener" class="btn">Book a Free Business Assessment</a>
-      </div>
-      <p class="price-note">Business systems are quoted individually — every premises is different. Prefer email? <a href="services.html#contact" style="color:var(--red); font-weight:600;">Use our contact form</a>.</p>
+      <section class="stage reveal">
+        <div class="stage-node">03</div>
+        <span class="stage-tag">16:45 <span>// the cold room gamble</span></span>
+        <h2>The outage stretches. Your stock is the stake.</h2>
+        <p>The schedule said four hours; it's been nine. If the generator falters tonight, the loss isn't fuel money — it's the meat in the cold room, the dairy in the fridges, the frozen stock you can't resell. <b>One bad night can erase a month's margin.</b></p>
+        <p>This is usually the moment owners stop patching the problem and decide to end it.</p>
+      </section>
+
+      <section class="stage on reveal">
+        <div class="stage-node">04</div>
+        <span class="stage-tag">The call <span>// one message starts it</span></span>
+        <h2>You talk to an engineer, not a salesman.</h2>
+        <p>One WhatsApp message books a free site visit. We come to your premises, measure what your business actually draws — compressor start-ups included — and go through your ZESA bills. Then we design the system properly and hand you a fixed quote with a payback calculation you can check yourself.</p>
+        <ul class="stage-list">
+          <li>Free on-site load assessment — measured, not guessed</li>
+          <li>System sized in professional design software</li>
+          <li>Fixed quote — the price we say is the price you pay</li>
+          <li>Payback projection built from your own bills</li>
+        </ul>
+      </section>
+
+      <section class="stage on reveal">
+        <div class="stage-node">05</div>
+        <span class="stage-tag">The build <span>// minimal disruption</span></span>
+        <h2>We install around your trading hours.</h2>
+        <p>Our own team does the work — no subcontractors, no finger-pointing. We test every circuit under load, walk you through the system, and hand over the paperwork. Then we stay reachable.</p>
+        <div class="spec-rows">
+          <div><span class="k">Typical range</span><span class="v">5–60kVA · single &amp; three-phase</span></div>
+          <div><span class="k">Equipment</span><span class="v">Proven brands, real warranties</span></div>
+          <div><span class="k">Workmanship</span><span class="v">1 year free</span></div>
+          <div><span class="k">Batteries / panels</span><span class="v">5 yrs / 20 yrs warranty</span></div>
+        </div>
+      </section>
+
+      <section class="stage on reveal">
+        <div class="stage-node">✓</div>
+        <span class="stage-tag">04:50, six months on <span>// the grid drops again</span></span>
+        <h2>And nothing in your shop notices.</h2>
+        <p>The cold room holds temperature. The tills come on with the lights. The generator sits in the corner as a backup to the backup — and the money that used to buy fuel stays in the business. <b>Your customers learn one thing about you: you're always open.</b></p>
+      </section>
+
+      <!-- TERMINUS / CONTACT -->
+      <section class="terminus reveal" id="contact">
+        <div class="terminus-node" aria-hidden="true"></div>
+        <div class="terminus-panel">
+          <h2>This is where the line ends. Start yours today.</h2>
+          <p>Send one message and we'll take it from there. Have a recent ZESA bill and a rough list of your equipment ready if you can — it makes the first visit sharper.</p>
+          <div class="contact-ctas">
+            <a href="https://wa.me/263786672352?text=Hi%20Giga%20Tech%2C%20I%27d%20like%20a%20free%20solar%20assessment%20for%20my%20business." target="_blank" rel="noopener" class="btn">WhatsApp Us Now</a>
+            <a href="services.html#contact" class="btn btn-ghost">Use the Contact Form</a>
+          </div>
+          <div class="terminus-contacts">
+            <div><span class="k">Call / WhatsApp — Tinofaranashe</span><a href="tel:+263786672352">+263 78 667 2352</a></div>
+            <div><span class="k">Call / WhatsApp — Takura</span><a href="tel:+263786668196">+263 78 666 8196</a></div>
+            <div><span class="k">Email</span><a href="mailto:tino@gigatechzw.com">tino@gigatechzw.com</a></div>
+            <div><span class="k">Based in</span>Harare, Zimbabwe — we travel to site</div>
+          </div>
+        </div>
+      </section>
+
     </div>
-  </section>
+  </div>
 
   <footer class="site-footer">
     <div class="wrap">
