@@ -146,7 +146,43 @@
   </section>
 
   <!-- PRICING -->
-  <section class="section" id="pricing" style="padding-top: 40px;">
+  <style>
+    /* Pricing section background photo — scoped to #pricing only.
+       Drop your photo in at images/pricing-bg.jpg (wide shot of installed systems).
+       The gradient fades the photo out vertically: visible behind the three
+       package cards, fully paper-white by the commercial section below.
+       To show MORE photo, lower the first two alpha values (keep ≥ 0.70).
+       If the image file is missing, the section just stays plain white. */
+    #pricing.pricing-bg {
+      background-image:
+        linear-gradient(180deg,
+          rgba(250, 250, 248, 0.82) 0%,
+          rgba(250, 250, 248, 0.86) 35%,
+          rgba(250, 250, 248, 0.97) 62%,
+          rgba(250, 250, 248, 1) 78%),
+        url("images/pricing-bg.jpg");
+      background-size: 100% auto;
+      background-position: top center;
+      background-repeat: no-repeat;
+    }
+    /* Lift the cards slightly off the photo */
+    #pricing.pricing-bg .price-card {
+      box-shadow: 0 6px 24px rgba(23, 24, 26, 0.08);
+    }
+    @media (max-width: 760px) {
+      /* Cards stack full-width on phones, covering most of the photo,
+         so stretch it to cover and strengthen the overlay for the edges */
+      #pricing.pricing-bg {
+        background-size: cover;
+        background-image:
+          linear-gradient(180deg,
+            rgba(250, 250, 248, 0.90) 0%,
+            rgba(250, 250, 248, 1) 70%),
+          url("images/pricing-bg.jpg");
+      }
+    }
+  </style>
+  <section class="section pricing-bg" id="pricing" style="padding-top: 40px;">
     <div class="wrap">
       <!--
         NOTE FOR SHERLOCK: All prices below are PLACEHOLDERS.
