@@ -39,6 +39,97 @@
     </div>
   </section>
 
+  <!-- BRAND MARQUEE -->
+  <section class="brand-marquee" aria-label="Equipment brands we install">
+    <style>
+      .brand-marquee {
+        border-top: 1px solid rgba(23, 24, 26, 0.12);
+        border-bottom: 1px solid rgba(23, 24, 26, 0.12);
+        padding: 22px 0;
+        overflow: hidden;
+        background: transparent;
+      }
+      .brand-marquee .bm-label {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        opacity: 0.55;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      .bm-viewport { overflow: hidden; width: 100%; }
+      .bm-track {
+        display: flex;
+        align-items: center;
+        gap: 72px;
+        width: max-content;
+        padding-right: 72px;
+        animation: bm-scroll 32s linear infinite;
+      }
+      .bm-viewport:hover .bm-track { animation-play-state: paused; }
+      @keyframes bm-scroll {
+        from { transform: translateX(0); }
+        to   { transform: translateX(-50%); }
+      }
+      .bm-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+      }
+      .bm-item img {
+        height: 34px;
+        width: auto;
+        max-width: 150px;
+        object-fit: contain;
+        filter: grayscale(1);
+        opacity: 0.55;
+        transition: opacity 0.25s ease;
+      }
+      .bm-item img:hover { opacity: 0.9; }
+      .bm-item .bm-word {
+        display: none;
+        font-family: 'Archivo', sans-serif;
+        font-weight: 800;
+        font-size: 1.35rem;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: rgba(23, 24, 26, 0.45);
+        white-space: nowrap;
+      }
+      @media (max-width: 560px) {
+        .bm-track { gap: 44px; padding-right: 44px; }
+        .bm-item img { height: 26px; }
+        .bm-item .bm-word { font-size: 1.05rem; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .bm-track { animation: none; }
+        .bm-viewport { overflow-x: auto; }
+      }
+    </style>
+    <div class="bm-label">Equipment we install &amp; support</div>
+    <div class="bm-viewport">
+      <div class="bm-track">
+        <!-- Set A -->
+        <div class="bm-item"><img src="images/brands/sumry.png" alt="Sumry" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Sumry</span></div>
+        <div class="bm-item"><img src="images/brands/polaris.png" alt="Polaris" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Polaris</span></div>
+        <div class="bm-item"><img src="images/brands/srne.png" alt="SRNE" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">SRNE</span></div>
+        <div class="bm-item"><img src="images/brands/deye.png" alt="Deye" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Deye</span></div>
+        <div class="bm-item"><img src="images/brands/growatt.png" alt="Growatt" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Growatt</span></div>
+        <div class="bm-item"><img src="images/brands/must.png" alt="Must" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Must</span></div>
+        <!-- Set B (duplicate for seamless loop) -->
+        <div class="bm-item" aria-hidden="true"><img src="images/brands/sumry.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Sumry</span></div>
+        <div class="bm-item" aria-hidden="true"><img src="images/brands/polaris.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Polaris</span></div>
+        <div class="bm-item" aria-hidden="true"><img src="images/brands/srne.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">SRNE</span></div>
+        <div class="bm-item" aria-hidden="true"><img src="images/brands/deye.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Deye</span></div>
+        <div class="bm-item" aria-hidden="true"><img src="images/brands/growatt.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Growatt</span></div>
+        <div class="bm-item" aria-hidden="true"><img src="images/brands/must.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Must</span></div>
+      </div>
+    </div>
+  </section>
+
   <!-- PRICING -->
   <section class="section" id="pricing" style="padding-top: 40px;">
     <div class="wrap">
@@ -92,7 +183,72 @@
           <a href="#contact" class="btn btn-ghost" style="text-align:center;">Order the 10kVA</a>
         </div>
       </div>
-      <p class="price-note" id="commercial">Need more than 10kVA? We design and build commercial and institutional systems up to 60kVA and beyond — <a href="#contact" style="color: var(--red); font-weight: 600;">tell us about your project</a> for a custom engineered quote. All systems come with our <a href="warranty.html" style="color: var(--red); font-weight: 600;">full warranty</a>.</p>
+      <!-- COMMERCIAL & INSTITUTIONAL — custom quoted -->
+      <div id="commercial" style="margin-top: 56px;">
+        <style>
+          .custom-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            max-width: 860px;
+            margin: 26px auto 0;
+          }
+          .custom-grid .amount-custom {
+            font-family: 'Archivo', sans-serif;
+            font-weight: 900;
+            font-size: 2rem;
+            line-height: 1.1;
+            margin: 8px 0 6px;
+          }
+          .custom-grid .amount-custom small {
+            display: block;
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 400;
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0.6;
+            margin-top: 6px;
+          }
+          @media (max-width: 760px) {
+            .custom-grid { grid-template-columns: 1fr; }
+          }
+        </style>
+        <div class="section-head reveal" style="margin-bottom: 0;">
+          <span class="eyebrow">Beyond 10kVA</span>
+          <h2>Bigger loads. Engineered quotes.</h2>
+          <p class="lede">Commercial and institutional systems aren't packages — they're projects. We study your loads and your ZESA bills, then engineer a system and a price around your operation.</p>
+        </div>
+        <div class="custom-grid">
+          <div class="price-card reveal" id="business-custom">
+            <div class="tier">Businesses</div>
+            <div class="amount-custom">Custom <small>Engineered to your operation</small></div>
+            <p class="for-who">Cold rooms, butcheries, shops, warehouses and offices that can't afford downtime.</p>
+            <ul>
+              <li>Free on-site load assessment</li>
+              <li>System sized from your actual consumption</li>
+              <li>10kVA to 60kVA and beyond</li>
+              <li>Full engineering documentation</li>
+              <li>Warranty-backed installation</li>
+            </ul>
+            <a href="business.html" class="btn btn-ghost" style="text-align:center;">See how we power businesses</a>
+          </div>
+          <div class="price-card reveal" id="institutional">
+            <div class="tier">Institutions &amp; Industry</div>
+            <div class="amount-custom">Custom <small>Full feasibility &amp; design study</small></div>
+            <p class="for-who">Farms, schools, clinics, lodges and industrial operations planning serious capacity.</p>
+            <ul>
+              <li>ZESA bill &amp; load profile analysis</li>
+              <li>PVsyst simulation &amp; payback projection</li>
+              <li>60kVA+ commercial-class systems</li>
+              <li>Single-line diagrams &amp; protection design</li>
+              <li>End-to-end EPC delivery by one team</li>
+            </ul>
+            <a href="industrial.html" class="btn btn-ghost" style="text-align:center;">See how we power institutions</a>
+          </div>
+        </div>
+        <p class="price-note" style="margin-top: 28px;">Every system — home or industrial — comes with our <a href="warranty.html" style="color: var(--red); font-weight: 600;">full warranty</a>. Ready to talk numbers? <a href="#contact" style="color: var(--red); font-weight: 600;">Tell us about your project</a>.</p>
+      </div>
     </div>
   </section>
 
