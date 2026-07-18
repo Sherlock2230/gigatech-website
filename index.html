@@ -94,6 +94,97 @@
     </div>
   </section>
 
+  <!-- BRAND MARQUEE -->
+  <section class="brand-marquee" aria-label="Equipment brands we install">
+    <style>
+      .brand-marquee {
+        border-top: 1px solid rgba(23, 24, 26, 0.12);
+        border-bottom: 1px solid rgba(23, 24, 26, 0.12);
+        padding: 22px 0;
+        overflow: hidden;
+        background: transparent;
+      }
+      .brand-marquee .bm-label {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        opacity: 0.55;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      .bm-viewport { overflow: hidden; width: 100%; }
+      .bm-track {
+        display: flex;
+        align-items: center;
+        gap: 72px;
+        width: max-content;
+        padding-right: 72px;
+        animation: bm-scroll 32s linear infinite;
+      }
+      .bm-viewport:hover .bm-track { animation-play-state: paused; }
+      @keyframes bm-scroll {
+        from { transform: translateX(0); }
+        to   { transform: translateX(-50%); }
+      }
+      .bm-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+      }
+      .bm-item img {
+        height: 34px;
+        width: auto;
+        max-width: 150px;
+        object-fit: contain;
+        filter: grayscale(1);
+        opacity: 0.55;
+        transition: opacity 0.25s ease;
+      }
+      .bm-item img:hover { opacity: 0.9; }
+      .bm-item .bm-word {
+        display: none;
+        font-family: 'Archivo', sans-serif;
+        font-weight: 800;
+        font-size: 1.35rem;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: rgba(23, 24, 26, 0.45);
+        white-space: nowrap;
+      }
+      @media (max-width: 560px) {
+        .bm-track { gap: 44px; padding-right: 44px; }
+        .bm-item img { height: 26px; }
+        .bm-item .bm-word { font-size: 1.05rem; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .bm-track { animation: none; }
+        .bm-viewport { overflow-x: auto; }
+      }
+    </style>
+    <div class="bm-label">Equipment we install &amp; support</div>
+    <div class="bm-viewport">
+      <div class="bm-track">
+        <!-- Set A -->
+        <div class="bm-item"><img src="images/brands/sumry.png" alt="Sumry" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Sumry</span></div>
+        <div class="bm-item"><img src="images/brands/polaris.png" alt="Polaris" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Polaris</span></div>
+        <div class="bm-item"><img src="images/brands/srne.png" alt="SRNE" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">SRNE</span></div>
+        <div class="bm-item"><img src="images/brands/deye.png" alt="Deye" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Deye</span></div>
+        <div class="bm-item"><img src="images/brands/growatt.png" alt="Growatt" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Growatt</span></div>
+        <div class="bm-item"><img src="images/brands/must.png" alt="Must" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Must</span></div>
+        <!-- Set B (duplicate for seamless loop) -->
+        <div class="bm-item" aria-hidden="true"><img src="images/brands/sumry.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Sumry</span></div>
+        <div class="bm-item" aria-hidden="true"><img src="images/brands/polaris.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Polaris</span></div>
+        <div class="bm-item" aria-hidden="true"><img src="images/brands/srne.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">SRNE</span></div>
+        <div class="bm-item" aria-hidden="true"><img src="images/brands/deye.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Deye</span></div>
+        <div class="bm-item" aria-hidden="true"><img src="images/brands/growatt.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Growatt</span></div>
+        <div class="bm-item" aria-hidden="true"><img src="images/brands/must.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="bm-word">Must</span></div>
+      </div>
+    </div>
+  </section>
+
   <!-- PROBLEM / PROMISE -->
   <section class="section section-dark">
     <div class="wrap">
