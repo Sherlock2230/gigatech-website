@@ -49,7 +49,33 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero">
+  <style>
+    /* Home-page hero background image — scoped to this section only.
+       To change the image: replace images/hero-bg.jpg (or edit the URL below).
+       If the file is missing, the hero simply falls back to the normal white background. */
+    .hero.hero-bg {
+      position: relative;
+      background-image:
+        linear-gradient(90deg,
+          rgba(250, 250, 248, 0.96) 0%,
+          rgba(250, 250, 248, 0.88) 45%,
+          rgba(250, 250, 248, 0.55) 75%,
+          rgba(250, 250, 248, 0.35) 100%),
+        url("images/hero-bg.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    /* On phones the text spans the full width, so use a stronger even overlay */
+    @media (max-width: 760px) {
+      .hero.hero-bg {
+        background-image:
+          linear-gradient(rgba(250, 250, 248, 0.92), rgba(250, 250, 248, 0.92)),
+          url("images/hero-bg.jpg");
+      }
+    }
+  </style>
+  <section class="hero hero-bg">
     <div class="wrap hero-grid">
       <div class="reveal">
         <span class="eyebrow">Solar · Engineered in Zimbabwe</span>
