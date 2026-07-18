@@ -214,6 +214,44 @@ h3 { font-size: 1.25rem; line-height: 1.3; }
 }
 .hero-visual svg { width: 85%; height: auto; }
 
+/* ---------- Hero video (Instagram flagship) ---------- */
+.hero-video-link {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: var(--ink); /* clean dark panel while loading / if video fails */
+}
+.ig-badge {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--paper);
+  background: rgba(23, 24, 26, 0.72);
+  border: 1px solid rgba(250, 250, 248, 0.25);
+  border-radius: 999px;
+  padding: 8px 14px;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s, border-color 0.2s;
+}
+.hero-video-link:hover .ig-badge,
+.hero-video-link:focus-visible .ig-badge {
+  background: var(--red);
+  border-color: var(--red);
+}
+
 .spec-chips {
   display: flex;
   gap: 10px;
