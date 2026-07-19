@@ -16,12 +16,9 @@
   <style>
     .calc-layout {
       display: grid;
-      grid-template-columns: 1fr 400px;
-      gap: 36px;
+      grid-template-columns: 1fr;
+      gap: 28px;
       align-items: start;
-    }
-    @media (max-width: 960px) {
-      .calc-layout { grid-template-columns: 1fr; }
     }
 
     /* ---- Segment tabs ---- */
@@ -212,10 +209,7 @@
       color: #f4f4f2;
       border-radius: 10px;
       padding: 26px 24px;
-      position: sticky;
-      top: 84px;
     }
-    @media (max-width: 960px) { .readout { position: static; } }
     .readout .ro-title {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 0.7rem;
@@ -238,10 +232,11 @@
     @media (prefers-reduced-motion: reduce) { .ro-live { animation: none; } }
     .ro-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px 18px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px 20px;
       margin-bottom: 20px;
     }
+    @media (max-width: 640px) { .ro-grid { grid-template-columns: 1fr 1fr; } }
     .ro-item .ro-label {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 0.6rem;
@@ -415,7 +410,6 @@
             </div>
           </div>
 
-          <p class="calc-note">These figures are an engineered estimate, not a quote. Real sizing also weighs your roof orientation, cable runs, ZESA supply and how your loads overlap through the day — that's what our free site assessment (homes) or paid feasibility study (commercial) pins down. Motor loads marked <span class="motor-chip" style="position:relative; top:-1px;">M</span> draw about three times their rated power for a moment at startup; the calculator sizes the inverter to survive the largest one starting while everything else runs.</p>
         </div>
 
         <aside class="readout" aria-live="polite">
@@ -431,6 +425,8 @@
             SUN HRS <span id="assumpSun">5.5</span>/DAY (USER SET)
           </div>
         </aside>
+
+        <p class="calc-note" style="margin-top: 0;">These figures are an engineered estimate, not a quote. Real sizing also weighs your roof orientation, cable runs, ZESA supply and how your loads overlap through the day — that's what our free site assessment (homes) or paid feasibility study (commercial) pins down. Motor loads marked <span class="motor-chip" style="position:relative; top:-1px;">M</span> draw about three times their rated power for a moment at startup; the calculator sizes the inverter to survive the largest one starting while everything else runs.</p>
       </div>
 
     </div>
