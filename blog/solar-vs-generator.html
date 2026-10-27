@@ -22,6 +22,15 @@
     "datePublished": "2026-07-06"
   }
   </script>
+  <style>/* Nav fit: keeps 8 nav items on one line on small laptops */
+    .nav a { white-space: nowrap; }
+    @media (min-width: 901px) and (max-width: 1180px) {
+      .nav { gap: 16px; }
+      .nav a { font-size: 0.86rem; }
+      .nav a.btn { padding: 9px 14px; }
+      .site-header .logo img { max-height: 38px; width: auto; }
+    }
+  </style>
 </head>
 <body>
 
@@ -31,6 +40,7 @@
       <nav class="nav" id="nav">
         <a href="../index.html">Home</a>
         <a href="../services.html">Services &amp; Pricing</a>
+        <a href="../electrical.html">Electrical</a>
         <a href="../how-we-work.html">How We Work</a>
         <a href="../projects.html">Projects</a>
         <a href="index.html" class="active">Blog</a>

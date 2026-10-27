@@ -11,6 +11,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="css/style.css">
+  <style>/* Nav fit: keeps 8 nav items on one line on small laptops */
+    .nav a { white-space: nowrap; }
+    @media (min-width: 901px) and (max-width: 1180px) {
+      .nav { gap: 16px; }
+      .nav a { font-size: 0.86rem; }
+      .nav a.btn { padding: 9px 14px; }
+      .site-header .logo img { max-height: 38px; width: auto; }
+    }
+  </style>
 </head>
 <body>
 
@@ -20,6 +29,7 @@
       <nav class="nav" id="nav">
         <a href="index.html">Home</a>
         <a href="services.html" class="active">Services &amp; Pricing</a>
+        <a href="electrical.html">Electrical</a>
         <a href="how-we-work.html">How We Work</a>
         <a href="projects.html">Projects</a>
         <a href="calculator.html">Calculator</a>
@@ -331,7 +341,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
           </div>
           <h3>Electrical works</h3>
-          <p>Wiring, distribution boards, changeover switches and general electrical installations — done to code by the same trusted team.</p>
+          <p>Wiring, distribution boards, changeover switches and general electrical installations — done to code by the same trusted team. <a href="electrical.html" style="color:var(--red);font-weight:600;">Grid, commercial &amp; industrial →</a></p>
         </div>
       </div>
     </div>
@@ -434,6 +444,7 @@
             <li><a href="services.html#home">Home Solar</a></li>
             <li><a href="services.html#business">Business Solar</a></li>
             <li><a href="services.html#commercial">Commercial &amp; Institutional</a></li>
+            <li><a href="electrical.html">Electrical Contracting</a></li>
           </ul>
         </div>
         <div>
